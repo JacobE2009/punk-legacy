@@ -410,3 +410,84 @@ footer {
     }
 
 }
+
+.objetivos {
+    padding: 100px 0;
+    background-color: var(--dark-bg);
+}
+
+.objetivos h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 900;
+}
+
+.objetivos-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.objetivo, .objetivos-especificos {
+    background-color: var(--light-bg);
+    padding: 40px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.objetivo::before, .objetivos-especificos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+.objetivo:hover, .objetivos-especificos:hover {
+    transform: translateY(-10px);
+}
+
+.objetivo h3, .objetivos-especificos h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.objetivos-especificos ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.objetivos-especificos li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+}
+
+.objetivos-especificos li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+/* Agregando regla responsive para la sección de objetivos */
+@media (max-width: 992px) {
+    .objetivos-grid {
+        flex-direction: column;
+    }
+}
